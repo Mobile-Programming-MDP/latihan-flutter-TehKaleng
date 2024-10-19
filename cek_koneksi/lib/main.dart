@@ -30,7 +30,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   late bool isConnected;
   final Connectivity _connectivity = Connectivity();
-  late StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
 
   @override
   void initState() {
@@ -38,12 +37,6 @@ class _HomeState extends State<Home> {
     super.initState();
     isConnected = true;
     _initConnectivityStatus().then((_) {
-      _connectivitySubscription =
-          _connectivity.onConnectivityChanged.listen((result) {
-        setState(() {
-          isConnected = !result.contains(ConnectivityResult.none);
-        });
-      });
     });
   }
 
