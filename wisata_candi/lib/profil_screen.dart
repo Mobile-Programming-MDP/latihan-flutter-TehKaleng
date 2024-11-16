@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:wisata_candi/widgets/profile_info_item.dart';
+import 'package:wisata_candi/profile_info_item.dart';
 
 class ProfilScreen extends StatefulWidget {
-  const ProfileScreen({super.key});
+  const ProfilScreen({super.key});
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<ProfilScreen> createState() => _ProfilScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _ProfilScreenState extends State<ProfilScreen> {
   //TODO 1: Deklarasikan variabel yg dibutuhkan
   bool isSignedIn = true;
   String fullName = "Nur Rachmat";
@@ -79,11 +79,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 const SizedBox(height: 20),
                 Divider(color: Colors.deepPurple[100]),
                 const SizedBox(height: 4),
-                ProfileInfoItem(
-                  icon: Icons.lock,
-                  label: "Pengguna",
-                  value: username,
-                  iconColor: Colors.amber,
+                const ProfileInfoItem(
+                  // icon: Icons.lock,
+                  // label: "Pengguna",
+                  // value: username,
+                  // iconColor: Colors.amber,
                 ),
                 //row nama
                 const SizedBox(height: 4),

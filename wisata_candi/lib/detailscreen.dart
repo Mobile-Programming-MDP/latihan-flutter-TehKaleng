@@ -66,7 +66,7 @@ class Detailscreen extends StatelessWidget{
                       ),
                     ),
                     IconButton(
-                      onPressed: (){}, icon: Icon(Icons.favorite_border),
+                      onPressed: (){}, icon: const Icon(Icons.favorite_border),
                       )
                   ],
                 ),
@@ -74,39 +74,39 @@ class Detailscreen extends StatelessWidget{
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Column(
               children: [
-                SizedBox(height: 16,),
-                Row(),
-                SizedBox(height: 16,),
+                const SizedBox(height: 16,),
+                const Row(),
+                const SizedBox(height: 16,),
                 Row(children: [
-                  Icon(Icons.place, color: Colors.red,),
-                  SizedBox(width: 8,),
-                  SizedBox(width: 70,
+                  const Icon(Icons.place, color: Colors.red,),
+                  const SizedBox(width: 8,),
+                  const SizedBox(width: 70,
                       child: Text('Lokasi', style: TextStyle(
                           fontWeight: FontWeight.bold),),),
                   Text(': ${candi.location}',),
                 ],),
                 Row(children: [
-                  Icon(Icons.calendar_month, color: Colors.blue,),
-                  SizedBox(width: 8,),
-                  SizedBox(width: 70,
+                  const Icon(Icons.calendar_month, color: Colors.blue,),
+                  const SizedBox(width: 8,),
+                  const SizedBox(width: 70,
                       child: Text('Dibangun', style: TextStyle(
                           fontWeight: FontWeight.bold),),),
                   Text(': ${candi.built}'),
                 ],),
                 Row(children: [
-                  Icon(Icons.calendar_month, color: Colors.green,),
-                  SizedBox(width: 8,),
-                  SizedBox(width: 70,
+                  const Icon(Icons.calendar_month, color: Colors.green,),
+                  const SizedBox(width: 8,),
+                  const SizedBox(width: 70,
                       child: Text('Tipe', style: TextStyle(
                           fontWeight: FontWeight.bold),),),
                   Text(': ${candi.type}'),
                 ],),
-                SizedBox(height: 16,),
+                const SizedBox(height: 16,),
                 Divider(color: Colors.deepPurple.shade100,),
-                SizedBox(height: 16,),
+                const SizedBox(height: 16,),
               ],
             ),),
             Padding(
@@ -115,10 +115,10 @@ class Detailscreen extends StatelessWidget{
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Divider(color: Colors.deepPurple.shade100,),
-                  Text('Galeri', style: TextStyle(
+                  const Text('Galeri', style: TextStyle(
                     fontSize: 16, fontWeight: FontWeight.bold,
                   ),),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   SizedBox(
                     height: 100,
                     child: ListView.builder(
@@ -126,11 +126,11 @@ class Detailscreen extends StatelessWidget{
                       itemCount: candi.imageUrls.length,
                       itemBuilder: (context, index){
                         return Padding(
-                            padding: EdgeInsets.only(left: 8),
+                            padding: const EdgeInsets.only(left: 8),
                           child: GestureDetector(
                              onTap: () {},
                              child: Container(
-                               decoration: BoxDecoration(),
+                               decoration: const BoxDecoration(),
                                child: ClipRRect(
                                 borderRadius: BorderRadius.circular(18),
                                 child: CachedNetworkImage(
@@ -142,8 +142,8 @@ class Detailscreen extends StatelessWidget{
                         }, 
                     ),
                   ),
-                  SizedBox(height: 4,),
-                  Text('Tap untuk memperbesar', style: TextStyle(
+                  const SizedBox(height: 4,),
+                  const Text('Tap untuk memperbesar', style: TextStyle(
                     fontSize: 12, color: Colors.black54,
                   ),),
                 ],
