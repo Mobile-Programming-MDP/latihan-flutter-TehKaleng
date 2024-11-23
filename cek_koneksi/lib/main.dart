@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Cek Koneksi",
       theme: ThemeData(primarySwatch: Colors.green),
-      home: Home(),
+      home: const Home(),
     );
   }
 }
